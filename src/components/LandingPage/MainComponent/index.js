@@ -47,7 +47,10 @@ function MainComponent() {
                         outlined={false}
                         onClick={() => console.log("btn clicked")} />
                     </Link>
-                    <Button text={"Share"} outlined={true} />
+                    <Link to="#"><Button text={"Share"} outlined={true} 
+                     onClick={() => console.log("btn clicked")}
+                    />
+                    </Link>
                 </motion.div>
             </div>
 

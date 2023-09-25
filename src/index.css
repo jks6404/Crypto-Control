@@ -24,7 +24,7 @@
   --yellow : rgb(226, 226, 45);
   --blue:#3a80e9;
 }
-
+/* to make smoth scrolling */
 html{
   scroll-behavior: smooth;
 }

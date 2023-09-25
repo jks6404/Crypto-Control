@@ -47,7 +47,7 @@ function SelectCoins({crypto1, crypto2, handleCoinChange}) {
                 onChange={(event)=>handleCoinChange(event,false)}
             >
                 {
-                    allCoins.filter((item) => item.id != crypto2)
+                    allCoins.filter((item) =>  crypto2 !== null && item.id !== crypto2)
                     .map ((coin)=>(
                         <MenuItem key={coin.id} value={coin.id}>{coin.name}</MenuItem>
                     ))
