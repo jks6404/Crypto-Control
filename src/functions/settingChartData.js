@@ -1,5 +1,5 @@
 
-import { convertDate } from "./converDate"
+import { convertDate } from "./convertDate"
 
 export const settingChartData = (setChartData, prices1, prices2, crypto1, crypto2)=> {
 

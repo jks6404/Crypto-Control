@@ -9,7 +9,7 @@ import CoinInfo from "../components/Coin/CoinInfo";
 import { getCoinPrices } from "../functions/getCoinPrices";
 import { getCoinData } from "../functions/getCoinData";
 import LineChart from "../components/Coin/LineChart";
-import { convertDate } from "../functions/converDate";
+import { convertDate } from "../functions/convertDate";
 import SelectDays from "../components/Coin/SelectDays";
 import { settingChartData } from "../functions/settingChartData";
 import TogglePriceType from "../components/Coin/PriceType";
