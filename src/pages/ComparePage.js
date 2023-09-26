@@ -10,6 +10,7 @@ import List from "../components/Dashboard/List";
 import CoinInfo from "../components/Coin/CoinInfo";
 import { settingChartData } from "../functions/settingChartData";
 import LineChart from "../components/Coin/LineChart";
+import BackToTop from "../components/Common/BackToTop";
 import TogglePriceType from "../components/Coin/PriceType";
 
 function ComparePage() {
@@ -104,6 +105,7 @@ const handleCoinChange = async (event, isCoin2) => {
 return (
     <div>
         {/* <Header /> */}
+        <BackToTop/>
         {
             isLoading ? (
                 <Loader />

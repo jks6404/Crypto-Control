@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import BackToTop  from "../components/Common/BackToTop";
 import Loader from "../components/Common/Loader";
 import Header from "../components/Common/Header";
 import { coinObject } from "../functions/convertObject";
 import List from "../components/Dashboard/List";
 import CoinInfo from "../components/Coin/CoinInfo";
-import { getCoinPrices } from "../functions/getCoinPrices";
+import { getCoinPrices}  from "../functions/getCoinPrices";
 import { getCoinData } from "../functions/getCoinData";
 import LineChart from "../components/Coin/LineChart";
-import { convertDate } from "../functions/convertDate";
 import SelectDays from "../components/Coin/SelectDays";
 import { settingChartData } from "../functions/settingChartData";
 import TogglePriceType from "../components/Coin/PriceType";
@@ -77,6 +76,7 @@ function CoinPage() {
     return (
         <div>
             {/* <Header /> */}
+            <BackToTop/>
             {
                 isLoader ? (
                     <Loader />
