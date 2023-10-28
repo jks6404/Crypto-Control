@@ -4,7 +4,7 @@ import "./styles.css";
 import Button from "../../Common/Button";
 import iphone from "../../../assets/iphone.080029ada53f0cd57453.png";
 import gradient from "../../../assets/gradient.12a666ed10b3b442b534.png";
-import {Link} from "react-router-dom";
+import { RWebShare } from "react-web-share";
 
 import { motion } from "framer-motion";
 
@@ -43,14 +43,21 @@ function MainComponent() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.5 }}
                 >
-                    <Link to="/dashboard"><Button text={"Dashboard"}
-                        outlined={false}
-                        onClick={() => console.log("btn clicked")} />
-                    </Link>
-                    <Link to="#"><Button text={"Share"} outlined={true} 
-                     onClick={() => console.log("btn clicked")}
-                    />
-                    </Link>
+
+                  <a href="/dashboard">
+            <Button text="Dashboard" />
+          </a>
+          <RWebShare
+            data={{
+              text: "Crypto Dashboard made using React JS.",
+              url: "https://crypto-dashboard-dec.netlify.app/",
+              title: "CryptoDashboard.",
+            }}
+            onClick={() => console.log("shared successfully!")}
+          >
+            <Button text="Share App" outlined={true} />
+          </RWebShare>
+
                 </motion.div>
             </div>
 
