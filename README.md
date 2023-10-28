@@ -1,4 +1,4 @@
-### Deployment- https://crypto-tracker-two-tau.vercel.app/
+### Deployment- https://crypto-control-two-tau.vercel.app/
 
 Landing page 
 ![image](https://github.com/jks6404/Crypto-Control/assets/119485859/eda68722-525d-48dd-b760-8679538b7252)
