@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import { toast } from "react-toastify";
 
 export default function DarkMode({ selectedTheme }) {
     const MaterialUISwitch = styled(Switch)(({ theme }) => ({
