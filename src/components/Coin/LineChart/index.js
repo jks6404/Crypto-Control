@@ -1,7 +1,10 @@
 import React from "react";
-
 import { Line } from "react-chartjs-2";
+import { Chart, LinearScale, CategoryScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
 import { convertNumbers } from "../../../functions/convertNumbers";
+
+// Register necessary Chart.js components
+Chart.register(LinearScale, CategoryScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 function LineChart({ chartData, priceType, multiAxis }) {
     console.log(priceType);
@@ -24,11 +27,8 @@ function LineChart({ chartData, priceType, multiAxis }) {
                 display: true,
                 position: "left",
                 ticks: {
-                    callback: function(value,index,ticks){
-                       if(priceType == "prices") return "$" + value.toLocaleString();
-                       else{
-                        return "$" + convertNumbers(value);
-                       }
+                    callback: function (value) {
+                        return priceType === "prices" ? "$" + value.toLocaleString() : "$" + convertNumbers(value);
                     }
                 }
             },
@@ -37,19 +37,15 @@ function LineChart({ chartData, priceType, multiAxis }) {
                 display: true,
                 position: "right",
                 ticks: {
-                    callback: function(value,index,ticks){
-                       if(priceType == "prices") return "$" + value.toLocaleString();
-                       else{
-                        return "$" + convertNumbers(value);
-                       }
+                    callback: function (value) {
+                        return priceType === "prices" ? "$" + value.toLocaleString() : "$" + convertNumbers(value);
                     }
                 }
             }
         }
     };
 
-    return <Line data={chartData} options={options} />
-
+    return <Line data={chartData} options={options} />;
 }
 
 export default LineChart;
